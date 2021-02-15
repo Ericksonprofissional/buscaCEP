@@ -51,6 +51,10 @@
     width: 20%;
 }
 
+.tabela__coluna--m {
+    width: 25%;
+}
+
 .tabela tr:last-of-type td {
     padding-bottom: 1.75rem;
 }
