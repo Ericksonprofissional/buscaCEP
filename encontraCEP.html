@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tabela.css">
+    <title>Encontra CEP</title>
+</head>
+<body>
+    <form>
+        <label for="estado">
+            Estado
+        </label>
+        <input type="text" placeholder="Digite o estado" id="uf" name="estado">
+        
+        <label for="cidade">
+            Cidade
+        </label>
+        <input type="text" placeholder="Digite a cidade" id="cidade">
+        
+        <label for="rua">
+            Rua
+        </label>
+        <input type="text" name="rua" id="rua" placeholder="Digite a sua Rua">
+        <button>Buscar</button>
+    </form>
+    <table class="tabela">
+        <thead>
+            <tr>
+                <th class="tabela__coluna--a">CEP</th>
+                <th class="tabela__coluna--b">UF</th>
+                <th class="tabela__coluna--c">Cidade</th>
+                <th class="tabela__coluna--c">Bairro</th>
+                <th class="tabela__coluna--c">rua</th>
+                <th class="tabela__coluna--m tabela__alinhamento--direita"><a href="encontraCEP.html" class="botao-simples botao-simples--adicionar">Nova Busca</a></th>
+            </tr>
+        </thead>
+        <tbody data-tabela>
+            
+        </tbody>
+    </table>
+    
+</body>
+<script src="js/service.js"></script>
+</html>
