@@ -1,12 +1,8 @@
 const liberaLista = (uf, cidade, rua) =>{
-    if(uf == '' || cidade == '' || rua == ''){
-        alert('UF, Cidade e Rua são obrigatorios');
-    }else {
         return fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${rua}/json/`)
         .then( resposta => {
           return resposta.json();
         });
-    }
 }
 
 const mostraUF = () =>{

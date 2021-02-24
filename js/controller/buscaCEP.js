@@ -12,10 +12,14 @@ function obterInfoForm() {
 
 const tbody = document.querySelector('tbody');
 
-var buscaCep = document.querySelector("button");
+var buscaCep = document.querySelector(".find");
+var limpaResultado = document.querySelector(".clear");
 
 buscaCep.addEventListener("click", function (event) {
     event.preventDefault();
+    if(uf == '' || cidade == '' || rua == ''){
+        alert('UF, Cidade e Rua são obrigatorios');
+    }else {
     services.liberaLista(obterInfoForm().uf, obterInfoForm().cidade, obterInfoForm().rua)
         .then(data =>{
             data.forEach(element => {
@@ -24,8 +28,13 @@ buscaCep.addEventListener("click", function (event) {
                 )
                 buscaCep.setAttribute('display', 'none');
             })
-    });
+        });
+    }
 });
+
+limpaResultado.addEventListener("click", evento =>{
+    window.location.href = ''
+})
 
 const criaNovaLinha = (cep, UF, localidade, bairro, rua) => {
     const linhaNovoCliente = document.createElement('tr');
